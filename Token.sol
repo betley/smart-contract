@@ -90,10 +90,10 @@ contract CBITToken is Ownable, ERC20 {
     uint256 public _saleSupply = 390000000e18;         //60% Sale
 
     // Address of owners who will get distribution tokens
-    address private _teamAddress = 0x5cFDe81cF1ACa91Ff8b7fEa63cFBF81B713BBf00;
-    address private _advisorsAddress = 0xC9F2DE0826235767c95254E1887e607d9Af7aA81;
-    address private _platformAddress = 0x572eE1910DD287FCbB109320098B7EcC33CB7e51;
-    address private _bountyAddress = 0xb496FB1F0660CccA92D1B4B199eDcC4Eb8992bfA;
+    address private _teamAddress = _;
+    address private _advisorsAddress = _;
+    address private _platformAddress = _;
+    address private _bountyAddress = _;
     uint256 public isDistributionTransferred = 0;
 
     // Balances for each account
@@ -139,7 +139,7 @@ contract CBITToken is Ownable, ERC20 {
     // @return the transaction address
     function CBITToken() public{
         // Initial Owner Wallet Address
-        multisig = 0x7BAD2a7C2c2E83f0a6E9Afbd3cC0029391F3B013;
+        multisig = _;
 
         balances[multisig] = _totalSupply;
 

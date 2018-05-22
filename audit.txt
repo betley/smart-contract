@@ -1,0 +1,17 @@
+1. Security attack, runtime error
+ - Attack
+  'onlyOwner' modifier was defined.
+  All ownable functions can be ran after checking by this modifier.
+
+ - Runtime Error
+  The problems can be issued by overload of uint are solved by 'SafeMath'.
+  Amount of presale tokens and mainsale tokens have been calculating in all transfer functions by require command.
+
+2. Performance
+ - Start time is set to '1527843600' for presale and '1533114000' for mainsale.
+  And as you can see in the codes, all token transfer functions are calculating available time before transfer.
+ - 'minContribAmount' and 'maxContribAmount' are implemented in transfer.
+ - 'Team', 'Platform', 'Advisors', 'Bounty' addresses are implemented and token transfer for them is implemented securely.
+
+3. Gas Price
+ - Only needed values were written in the class. Little gas fees.

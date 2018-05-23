@@ -71,7 +71,7 @@ contract ERC20 {
 
 }
 
-contract CBITToken is Ownable, ERC20 {
+contract BetleyToken is Ownable, ERC20 {
 
     using SafeMath for uint256;
 
@@ -135,20 +135,17 @@ contract CBITToken is Ownable, ERC20 {
     }
 
     // Constructor
-    // @notice CBITToken Contract
+    // @notice BetleyToken Contract
     // @return the transaction address
-    function CBITToken() public{
+    function BetleyToken() public{
         // Initial Owner Wallet Address
         multisig = _;
 
         balances[multisig] = _totalSupply;
 
-        //preSaleStartTime = 1527843600; // June 1st 9:00 GMT
-        //mainSaleStartTime = 1533114000; // August 1st 9:00 GMT
-
-        preSaleStartTime = 1526911225;
-        mainSaleStartTime = 1529589625;
-
+        preSaleStartTime = 1527843600; // June 1st 9:00 GMT
+        mainSaleStartTime = 1533114000; // August 1st 9:00 GMT
+        
         owner = msg.sender;
 
         sendTeamSupplyToken(_teamAddress);
